@@ -1,0 +1,4 @@
+ziggie.py contains 2 functions.
+
+get_ziggie carries out and returns ziggie for given x and y points and the segment bounds to be used.
+example is a function to carry out a simple ziggie calculation with Arai plot data.
