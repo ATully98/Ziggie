@@ -44,24 +44,6 @@ def get_ziggie(Xpts, Ypts, seg_min, seg_max):
     return ziggie
 
 
-def get_gradients(Xpts, Ypts, seg):
-    X_seg = Xpts[seg]
-    Y_seg = Ypts[seg]
-    xbar = np.mean(X_seg)
-    ybar = np.mean(Y_seg)
-    U = detrend(X_seg, type = "constant", axis = 0) # (Xi-Xbar)
-    V = detrend(Y_seg, type = "constant", axis = 0) # (Yi-Ybar)
-    b = np.sign(np.sum(U*V))*np.std(Y_seg, ddof = 1)/np.std(X_seg, ddof = 1)
-    sigma_b = np.sqrt( (2*np.sum(V**2)-2*(b)*np.sum(U*V)) / ( (n-2)*np.sum(U**2)) )
-    beta = np.abs(sigma_b/b)
-
-
-    Y_int = np.mean(Y_seg) - b*np.mean(X_seg)
-    X_int = -Y_int/b
-    
-    return b, Y_int
-
-
 def example():
 
   # Input x-points
