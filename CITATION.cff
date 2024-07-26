@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: "YOUR_NAME_HERE"
-  given-names: "YOUR_NAME_HERE"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-- family-names: "Lisa"
-  given-names: "Mona"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Tully"
+  given-names: "Alexander"
+  orcid: "https://orcid.org/0000-0003-4371-0523"
+- family-names: "Paterson"
+  given-names: "Greig"
+  orcid: "https://orcid.org/0000-0002-6864-7420"
 title: "Ziggie"
 version: 1.0.0
-doi: 10.5281/zenodo.1234
-date-released: 2024-07-25
+doi: 10.5281/zenodo.12887405
+date-released: 2024-07-26
 url: "https://github.com/ATully98/Ziggie"
