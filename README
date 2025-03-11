@@ -1,4 +1,5 @@
-ziggie.py contains 2 functions.
+Ziggie is a selection statistic for identifying and quantifying zig-zagging in Arai plots during paleointensity analysis.
 
-get_ziggie carries out and returns ziggie for given x and y points and the segment bounds to be used.
-example is a function to carry out a simple ziggie calculation with Arai plot data.
+Currently a criterion of Ziggie <= 10 is suggested.
+
+Example usage is demonstrated within the jupyter notebook.
