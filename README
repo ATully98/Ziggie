@@ -1,5 +1,7 @@
 Ziggie is a selection statistic for identifying and quantifying zig-zagging in Arai plots during paleointensity analysis.
 
-Currently a criterion of Ziggie <= 10 is suggested.
+Currently a criterion of Ziggie <= 0.1 is suggested.
 
 Example usage is demonstrated within the jupyter notebook.
+
+
