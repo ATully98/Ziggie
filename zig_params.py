@@ -724,7 +724,7 @@ def get_ziggie(Xpts, Ypts, seg_min, seg_max):
 #     print(f"k_prime: {k_prime}")
     if (np.abs(k_prime) <= 1e-3) or (np.isnan(k_prime)):
         ziggie, cum_len, Line_Len = get_zigzag(Xn, Yn, seg_min, seg_max)
-        return ziggie, cum_len, Line_Len
+        return ziggie, cum_len, Line_Len, np.nan
     else:
         arc, point1, point2 = AraiArc(k_prime.item(), a.item(), b.item(), Xn[0][0],Yn[0][0],Xn[-1][0], Yn[-1][0],  )
         n = len(Xn)
@@ -742,4 +742,4 @@ def get_ziggie(Xpts, Ypts, seg_min, seg_max):
 
         # calculate the log of the cumulative length over the length of the best fit line
         ziggie = np.log(cum_len/arc)
-        return ziggie, cum_len, arc
+        return ziggie, cum_len, arc, RMS.item()

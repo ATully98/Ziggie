@@ -2,6 +2,37 @@ Ziggie is a selection statistic for identifying and quantifying zig-zagging in A
 
 Currently a criterion of Ziggie <= 0.1 is suggested.
 
-Example usage is demonstrated within the jupyter notebook.
+Example usage is demonstrated within the Jupyter notebook.
+The notebook requires the following packages to work:
+numpy
+scipy
+pandas
+matplotlib
+future
+
+Note: If future is not installed error messages may reference the module 'past'
+
+The example input txt file has 2 columns, the x and y points of the Arai plot respectively.
+
+A comma delimited format can be loaded instead by including the delimiter option:
+pts = np.loadtxt("./AraiPlot.csv", delimiter=",")
+
+There is no requirement to use a input file and a numpy array of shape (n, 2) may be used (where n is the number of points in the Arai plot).
+
+The input points may be normalised or not as preferred.
+
+Ziggie is calculated for a selected fit.  This is done by setting the values of seg_min and seg_max, which are the first and last point in the fit respectively.
+The index of the points should be changed to select the desired fit.
+Note that python uses zero based indexing, as such indices are numbered 0,1,2,3,...,n-1.
 
 
+Unusual values of ziggie may occur, such as negative values, due to a poor circle fit to the data.  This may be indicated by checking the root-mean-square (RMS) value.
+To do so the following lines should be uncommented (remove the hash symbol):
+print(f"RMS: {RMS:0.3f}")
+
+The Arai plot for the data can be displayed by running the next cell.  The selected fit will be plotted in colour, with the unused points in grey.  If the selected fit passes it will be coloured blue,  whereas a fit that fails will be plotted in red.
+
+The third cell allows for ziggie to be found for all fits with at least 3 points. Those that meet the criteria of ziggie <= 0.1 will be highlighted as passed.
+To use a different criterion the 'criteria' variable can be changed.
+
+The show_rms variable can be set to True (or False), to display (or not) the RMS values of the fit.
