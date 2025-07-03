@@ -30,7 +30,7 @@ Unusual values of ziggie may occur, such as negative values, due to a poor circl
 To do so the following lines should be uncommented (remove the hash symbol):
 print(f"RMS: {RMS:0.3f}")
 
-The Arai plot for the data can be displayed by running the next cell.  The selected fit will be plotted in colour, with the unused points in grey.  If the selected fit passes it will be coloured blue,  whereas a fit that fails will be plotted in red.
+The Arai plot for the data can be displayed by running the next cell.  The selected fit will be plotted in colour, with the unused points in grey.  If the selected fit passes it will be coloured blue,  whereas a fit that fails will be plotted in red. If ziggie is negative the plot will be in orange.
 
 The third cell allows for ziggie to be found for all fits with at least 3 points. Those that meet the criteria of ziggie <= 0.1 will be highlighted as passed.
 To use a different criterion the 'criteria' variable can be changed.
